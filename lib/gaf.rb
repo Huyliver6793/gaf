@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "gaf/version"
-require "gaf/worksheet/create_worksheet"
-require "gaf/worksheet/load_worksheet"
-require "gaf/processor"
 require "gaf/config"
+require "gaf/version"
 
 
 module Gaf
+  autoload :Processor, "gaf/processor"
+
   class Error < StandardError; end
 
   def self.configure
